@@ -10,4 +10,4 @@ def solution(arr1, arr2):
             for k in range(K):
                 answer[i][j] += arr1[i][k] * arr2[k][j]
     return answer
-        
+
