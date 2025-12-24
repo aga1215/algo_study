@@ -17,3 +17,4 @@ def solution(arr1, arr2):
             for k in range(len(arr2)): # 제일 작은 단위 : 한 줄 안에서
                 answer[i][j] += arr1[i][k] * arr2[k][j]
     return answer
+ 
