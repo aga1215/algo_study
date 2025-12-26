@@ -6,32 +6,27 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.StringTokenizer;
 
-public class RemoveDuplicateSort {
+public class TwoNumberSum {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = new StringTokenizer(br.readLine());
 
-		Set<Integer> set = new HashSet<>();
-		while (st.hasMoreTokens()) {
-			set.add(Integer.parseInt(st.nextToken()));
-		}
-
-		int[] arr = new int[set.size()];
+		int[] arr = new int[st.countToken()];
 		int idx = 0;
-		for (int x : set)
-			arr[idx++] = x;
 
-		Arrays.sort(arr);
+		Set<Integer> set = new HashSet<>();
 
-		StringBuilder sb = new StringBuilder();
-		sb.append("[");
-		for (int i = arr.length - 1; i >= 0; i--) {
-			sb.append(arr[i]);
-			if (i != 0)
-				sb.append(", ");
+		while (st.hasMoreToken()) {
+			arr[idx++] = Integer.parseInt(st.nextToken());
 		}
-		sb.append("]");
 
-		System.out.println(sb);
+		for (int i = 0; i < arr.length - 1; i++) {
+			for (int j = i + 1; j < arr.length; j++) {
+				set.add(arr[i] + arr[j]);
+			}
+		}
+
+		int[] result = set.stream().sorted().mapToInt(Integer::intValue).toArray();
+		System.out.println(Arrays.toString(result));
 	}
 }
