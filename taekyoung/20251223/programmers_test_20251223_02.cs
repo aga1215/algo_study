@@ -16,7 +16,7 @@ public class Solution {
     
     public int[] GetMax(int[] arr)
     {
-        int best = Int32.MinValue;
+        int best = int.MinValue;
         List<int> maxs = new List<int>();
             
         for(int i = 0; i < arr.Length; i ++)
