@@ -28,6 +28,13 @@ def solution(s):
 
     return answer
 
+# 입력 받기
+temp = input()
+for c in temp: 
+    if c not in '{}[]()':
+        break
+print(solution(temp))
+
 '''
 개선: gpt 도움
 - 괄호 쌍이 있기 때문에 딕셔너리 형태로 else 구문의 if 분기를 간결하게 작성할 수도 있음!
