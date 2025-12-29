@@ -2,6 +2,7 @@
 #include <iostream>
 #include <stack>
 
+
 using namespace std;
 
 bool solution(string s)
