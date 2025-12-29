@@ -33,7 +33,7 @@ bool is_correct_bracket(string s)
             if (brackets.size() == 0) return false;
             
             char top = brackets.top();
-            char check = -1 * (top % 2 - 1) * (top + 1) + (top % 2) * (top + 2);
+            char check = (1 - top % 2) * (top + 1) + (top % 2) * (top + 2);
             if (s[i] == check)
             {
                 brackets.pop();
