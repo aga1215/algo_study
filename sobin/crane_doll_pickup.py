@@ -1,6 +1,6 @@
 def solution(board, moves):
     basket = []
-    removed = 0
+    removed = 0 
 
     n = len(board)
 
