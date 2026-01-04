@@ -3,7 +3,7 @@ def solution(n, k, cmd):
     # 0번 행의 이전은 -1, 마지막 행의 다음은 -1로 처리
     linked_list = [[i - 1, i + 1] for i in range(n)]
     linked_list[0][0] = -1
-    linked_list[n - 1][1] = -1
+    linked_list[n - 1][1] = -1 
     
     # 삭제된 행들을 담을 스택
     stack = []
